@@ -5,20 +5,23 @@ body {
 }
 
 h2 {
-  font-size: 26px;
-  font-weight: 400;
-  margin: 0 10px 10px 10px;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 10px 10px 30px 10px;
   text-align: center;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 500;
+  margin-left: 5%;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 p {
   line-height: 1.5em;
-  margin: 0;
+  margin: 0 5% 20px 5%;
+  font-size: 23px;
+  font-weight: 600;
 }
 
 section {
@@ -31,7 +34,19 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
+
+#about img {
+  margin-bottom: 35px;
+}
+
+ul {
+  font-size: 23px;
+  font-weight: 500;
+  margin: 0 3% 30px 8%;
 }
 
 /* ---  Groups & Items --- */
@@ -60,12 +75,22 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 100px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
   list-style-type: none;
+  font-size: 16;
 }
 
 header nav ul li a {
@@ -89,8 +114,7 @@ form label {
   font-weight: bold;
 }
 
-form select,
-form input {
+form select, form input {
   margin-bottom: 20px;
   width: 180px;
 }
@@ -104,6 +128,16 @@ form button {
   width: 100%;
 }
 
+.date::placeholder {
+  color: black;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -113,7 +147,61 @@ footer {
 footer p {
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  font-size: 25px;
+  margin-bottom: 0;
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 768px) {
+  header {
+    /* Changes the default setting from `block` to `flex`. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav {
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul li a:hover {
+    color: #bdbdbd;
+  }
+  .logo {
+    font-size: 30px;
+    justify-content: center;
+  }
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .space-between {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .padding {
+    margin: 10px;
+  }
+  .picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .col2 {
+    flex: 1 0 calc(35% - 20px);
+    margin: 5px;
+  }
+  .padding {
+    margin: 10px;
+  }
+}
